@@ -1,5 +1,7 @@
+
+
 public class CaesarCipher {
-    private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.,«»\"'!:? -;(){}[]@#%^&*/\\<>~`=_+|";
 
     public static String encrypt(String text, int key) {
         return shiftText(text, key);
@@ -9,7 +11,7 @@ public class CaesarCipher {
         return shiftText(text, key);
     }
 
-    private static String shiftText(String text, int shift) {
+    private static String shiftText(String text , int shift) {
         StringBuilder result = new StringBuilder();
         for (char c : text.toCharArray()) {
             int index = ALPHABET.indexOf(c);
@@ -21,6 +23,5 @@ public class CaesarCipher {
             }
         }
         return result.toString();
-
     }
 }
