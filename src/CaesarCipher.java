@@ -8,7 +8,7 @@ public class CaesarCipher {
     }
 
     public static String decrypt(String text, int key) {
-        return shiftText(text, key);
+        return shiftText(text, -key);
     }
 
     private static String shiftText(String text , int shift) {
